@@ -77,75 +77,77 @@
 
                 <ul class="uk-switcher uk-margin">
                     <li>
-                        <table class="uk-table uk-table-divider uk-table-justify">
-                            <!-- <caption>آخرین اخبار اقتصادی</caption> -->
-                            <!-- 
-                            <thead>
-                                <tr>
-                                    <th>Table Heading</th>
-                                    <th>Table Heading</th>
-                                    <th>Table Heading</th>
-                                    <th>Table Heading</th>
-                                </tr>
-                            </thead>
-                            <tfoot>
-                                <tr>
-                                    <td>Table Footer</td>
-                                    <td>Table Footer</td>
-                                    <td>Table Footer</td>
-                                    <td>Table Footer</td>
-                                </tr>
-                            </tfoot>
-                            -->
-                            <tbody>
-                            <?php
-                                $counter = 0;
-                                foreach ($op as $timestamp => $item):
-                                if (++$counter == 26) break;
-                            ?>
-                            <?php
-                                
-                                $timestamp_to_date = date('Y/d/m H:i:s', $item['timestamp']);
-                                $date_part = explode(' ', $timestamp_to_date);
-                                $date_part = explode('/', $date_part[0]);
- 
-                                $jYear  = $date_part[0];
-                                $jMonth = $date_part[1];
-                                $jDay   = $date_part[2];
+                        <div class="uk-overflow-auto">
+                            <table class="uk-table uk-table-divider uk-table-justify">
+                                <!-- <caption>آخرین اخبار اقتصادی</caption> -->
+                                <!-- 
+                                <thead>
+                                    <tr>
+                                        <th>Table Heading</th>
+                                        <th>Table Heading</th>
+                                        <th>Table Heading</th>
+                                        <th>Table Heading</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <td>Table Footer</td>
+                                        <td>Table Footer</td>
+                                        <td>Table Footer</td>
+                                        <td>Table Footer</td>
+                                    </tr>
+                                </tfoot>
+                                -->
+                                <tbody>
+                                <?php
+                                    $counter = 0;
+                                    foreach ($op as $timestamp => $item):
+                                    if (++$counter == 26) break;
+                                ?>
+                                <?php
+                                    
+                                    $timestamp_to_date = date('Y/d/m H:i:s', $item['timestamp']);
+                                    $date_part = explode(' ', $timestamp_to_date);
+                                    $date_part = explode('/', $date_part[0]);
+    
+                                    $jYear  = $date_part[0];
+                                    $jMonth = $date_part[1];
+                                    $jDay   = $date_part[2];
 
-                                $date = gregorian_to_jalali($jYear, $jMonth, $jDay, '-');
-                                $en = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-                                $fa = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
-                                $date = str_replace($en, $fa, $date);
-                                $favicon = '';
-                                if ($item['src'] == 'گسترش‌نیوز') {
-                                    $favicon = 'https://www.gostaresh.news/favicon-57.png';
-                                }
-                                if ($item['src'] == 'اقتصاد آنلاین') {
-                                    $favicon = 'https://www.eghtesadonline.com/favicon.ico';
-                                }
-                                if ($item['src'] == 'اقتصاد نیوز') {
-                                    $favicon = 'https://www.eghtesadonline.com/favicon.ico';
-                                }
-                                if ($item['src'] == 'تسنیم') {
-                                    $favicon = 'https://www.tasnimnews.com/static/img/icons/favicon.ico';
-                                }
-                                if ($item['src'] == 'مشرق') {
-                                    $favicon = 'https://www.mashreghnews.ir/resources/theme/mashreghnews/img/favicon.ico';
-                                }
-                                if ($item['src'] == 'پندار آنلاین') {
-                                    $favicon = 'https://www.pendaronline.news/favicon.ico';
-                                }
-                            ?>
-                                <tr>
-                                    <td class="uk-table-shrink"><ion-icon name="ellipse-outline" class="blink"></ion-icon></td>
-                                    <td class="uk-table-expand"><a class="uk-link-reset" href="<?php echo $item['url']; ?>" target="_blank"><?php echo $item['title']; ?></a></td>
-                                    <td class="uk-table-expand"><img class="favicon" src="<?php echo $favicon; ?>" alt=""><?php echo $item['src']; ?></td>
-                                    <td class="uk-table-expand"><?php echo $date; ?></td>
-                                </tr>
-                            <?php endforeach; ?>
-                            </tbody>
-                        </table>
+                                    $date = gregorian_to_jalali($jYear, $jMonth, $jDay, '-');
+                                    $en = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+                                    $fa = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+                                    $date = str_replace($en, $fa, $date);
+                                    $favicon = '';
+                                    if ($item['src'] == 'گسترش‌نیوز') {
+                                        $favicon = 'https://www.gostaresh.news/favicon-57.png';
+                                    }
+                                    if ($item['src'] == 'اقتصاد آنلاین') {
+                                        $favicon = 'https://www.eghtesadonline.com/favicon.ico';
+                                    }
+                                    if ($item['src'] == 'اقتصاد نیوز') {
+                                        $favicon = 'https://www.eghtesadonline.com/favicon.ico';
+                                    }
+                                    if ($item['src'] == 'تسنیم') {
+                                        $favicon = 'https://www.tasnimnews.com/static/img/icons/favicon.ico';
+                                    }
+                                    if ($item['src'] == 'مشرق') {
+                                        $favicon = 'https://www.mashreghnews.ir/resources/theme/mashreghnews/img/favicon.ico';
+                                    }
+                                    if ($item['src'] == 'پندار آنلاین') {
+                                        $favicon = 'https://www.pendaronline.news/favicon.ico';
+                                    }
+                                ?>
+                                    <tr>
+                                        <td class="uk-table-shrink"><ion-icon name="ellipse-outline" class="blink"></ion-icon></td>
+                                        <td class="uk-table-expand"><a class="uk-link-reset" href="<?php echo $item['url']; ?>" target="_blank"><?php echo $item['title']; ?></a></td>
+                                        <td class="uk-table-expand"><img class="favicon" src="<?php echo $favicon; ?>" alt=""><?php echo $item['src']; ?></td>
+                                        <td class="uk-table-expand"><?php echo $date; ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </li>
                     <li>دیتاست آماده نشده است.</li>
                     <li>دیتاست آماده نشده است.</li>
