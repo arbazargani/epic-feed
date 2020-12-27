@@ -1,4 +1,6 @@
 <?php
+    $timezone = "Asia/Tehran";
+    date_default_timezone_set($timezone);
     include 'core.php'
 ?>
 <!DOCTYPE html>
@@ -58,6 +60,10 @@
                 from { opacity: 1; }
                 to { opacity: 0; }
             }
+            .favicon {
+                max-width: 15px;
+                margin-left: 5px;   
+            }
         </style>
     </head>
     <body>
@@ -111,19 +117,38 @@
                                 $en = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
                                 $fa = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
                                 $date = str_replace($en, $fa, $date);
+                                $favicon = '';
+                                if ($item['src'] == 'گسترش‌نیوز') {
+                                    $favicon = 'https://www.gostaresh.news/favicon-57.png';
+                                }
+                                if ($item['src'] == 'اقتصاد آنلاین') {
+                                    $favicon = 'https://www.eghtesadonline.com/favicon.ico';
+                                }
+                                if ($item['src'] == 'اقتصاد نیوز') {
+                                    $favicon = 'https://www.eghtesadonline.com/favicon.ico';
+                                }
+                                if ($item['src'] == 'تسنیم') {
+                                    $favicon = 'https://www.tasnimnews.com/static/img/icons/favicon.ico';
+                                }
+                                if ($item['src'] == 'مشرق') {
+                                    $favicon = 'https://www.mashreghnews.ir/resources/theme/mashreghnews/img/favicon.ico';
+                                }
+                                if ($item['src'] == 'پندار آنلاین') {
+                                    $favicon = 'https://www.pendaronline.news/favicon.ico';
+                                }
                             ?>
                                 <tr>
                                     <td class="uk-table-shrink"><ion-icon name="ellipse-outline" class="blink"></ion-icon></td>
-                                    <td class="uk-table-expand"><?php echo $item['title']; ?></td>
-                                    <td class="uk-table-expand"><?php echo $item['src']; ?></td>
+                                    <td class="uk-table-expand"><a class="uk-link-reset" href="<?php echo $item['url']; ?>" target="_blank"><?php echo $item['title']; ?></a></td>
+                                    <td class="uk-table-expand"><img class="favicon" src="<?php echo $favicon; ?>" alt=""><?php echo $item['src']; ?></td>
                                     <td class="uk-table-expand"><?php echo $date; ?></td>
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>
                         </table>
                     </li>
-                    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+                    <li>دیتاست آماده نشده است.</li>
+                    <li>دیتاست آماده نشده است.</li>
                 </ul>
             </div>
         </div>

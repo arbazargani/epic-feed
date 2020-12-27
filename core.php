@@ -83,9 +83,11 @@ function FileXMLrender ($streams) {
 
 $op = XMLrender([
     'گسترش‌نیوز' => 'https://www.gostaresh.news/fa/feeds/?p=Y2F0ZWdvcmllcz04Mw%2C%2C',
-    'دنیای اقتصاد' => 'https://donya-e-eqtesad.com/feeds/',
-    'افکار نیوز' => 'https://www.afkarnews.com/fa/feeds',
-    'برنا' => 'https://www.borna.news/fa/feeds'
+    'اقتصاد آنلاین' => 'https://www.eghtesadonline.com/fa/feeds/?p=Y2F0ZWdvcmllcz0xMA%2C%2C',
+    'اقتصاد نیوز' => 'https://www.eghtesadnews.com/fa/feeds/?p=Y2F0ZWdvcmllcz02Nw%2C%2C',
+    'تسنیم' => 'https://www.tasnimnews.com/fa/rss/feed/0/7/7/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C',
+    'مشرق' => 'https://www.mashreghnews.ir/rss/tp/16',
+    'پندار آنلاین' => 'https://www.pendaronline.news/fa/feeds/?p=Y2F0ZWdvcmllcz00'
 ]);
 
 // $op = FileXMLrender([
