@@ -120,22 +120,22 @@
                                     $date = str_replace($en, $fa, $date);
                                     $favicon = '';
                                     if ($item['src'] == 'گسترش‌نیوز') {
-                                        $favicon = 'https://www.gostaresh.news/favicon-57.png';
+                                        $favicon = 'assets/images/fav/gostaresh.png';
                                     }
                                     if ($item['src'] == 'اقتصاد آنلاین') {
-                                        $favicon = 'https://www.eghtesadonline.com/favicon.ico';
+                                        $favicon = 'assets/images/fav/eghtesadonline.ico';
                                     }
                                     if ($item['src'] == 'اقتصاد نیوز') {
-                                        $favicon = 'https://www.eghtesadonline.com/favicon.ico';
+                                        $favicon = 'assets/images/fav/eghtesadnews.ico';
                                     }
                                     if ($item['src'] == 'تسنیم') {
-                                        $favicon = 'https://www.tasnimnews.com/static/img/icons/favicon.ico';
+                                        $favicon = 'assets/images/fav/tasnim.ico';
                                     }
                                     if ($item['src'] == 'مشرق') {
-                                        $favicon = 'https://www.mashreghnews.ir/resources/theme/mashreghnews/img/favicon.ico';
+                                        $favicon = 'assets/images/fav/mashregh.ico';
                                     }
                                     if ($item['src'] == 'پندار آنلاین') {
-                                        $favicon = 'https://www.pendaronline.news/favicon.ico';
+                                        $favicon = 'assets/images/fav/pendaronline.png';
                                     }
                                 ?>
                                     <tr>
